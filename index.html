@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Home</title>
+      <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body onscroll="animateOnSight('hidden','fade-in-element')">
+    <!-- HERO IMAGE -->
+    <section class="hero-img">
+      <div class="hero-text center-in-container">
+          <h1 class="mb-5">Hello, <b class="color-red">I'm Vi Nguyen.</b><br>
+             I'm a full-stack developer</h1>
+          <button class="mybtn" onclick="ViewMoreButton()">View More</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="hidden section-padding" id="about">
+      <div class="container">
+          <div class="text-center my-5">
+            <h1 class="font-weight-bold" style="color:#8B0000">ABOUT ME</h1>
+            <p class="mb-4 font-weight-bold">Back end focus with Full-stack experience.</p>     
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img src="images/vn.jpg" class="me">
+              <div class="text-center">
+                <h5 class="mt-2 mb-4" style="color:#8B0000">Want to know about me?</h5>
+                <p>Hi, my name is Vi! I’m a Computer Programming student at Niagara College where I build and develops websites, web applications, mobile applications and databases from start to finish, including debugging and deploying applications in different programming languages, but my preference are C#, Python and SQL.</p>
+				<p>I’m a e-book enthusiast and spend most of her time on my laptop reading away or coding, or sometimes Youtube is also very relaxing in my place in St. Catharines, Ontario. Please email nguyenthithaovi99@gmail.com to contact me.</p>
+
+              </div>
+            </div>
+            <!-- Skills -->
+            <div class="col-sm-7">                          
+              <h6>.NET</h6>
+              <div class="line line90">90%</div>
+			  <h6>SQL/T-SQL</h6>
+              <div class="line line90">90%</div>
+			  <h6>Data Warehouse/Big Data</h6>
+              <div class="line line90">70%</div>
+			  <h6>Python</h6>
+              <div class="line line60">70%</div>			  
+			  <h6>WordPress</h6>
+              <div class="line line60">60%</div>
+              <h6>JavaScript</h6>
+              <div class="line line70">70%</div>             
+			  <h6>Angular</h6>
+              <div class="line line80">70%</div>
+			  <h6>HTML / CSS</h6>
+              <div class="line line80">80%</div>
+              <h6>Bootstrap</h6>
+              <div class="line line80">80%</div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section-padding bg-color-grey">
+      <div class="hidden container">
+        <h1 class="text-center font-weight-bold" style="color:#8B0000">PROJECTS</h1>
+        <div class="row d-flex justify-content-center">
+          <div class=" col-md-6">
+            <div id="myBtnContainer" class="my-4 text-center">
+              <button class="btn active" onclick="filterSelection('all')">ALL</button>
+              <button class="btn " onclick="filterSelection('backend')">Back-End</button>
+              <button class="btn " onclick="filterSelection('frontend')">Front-End</button>
+              <button class="btn " onclick="filterSelection('sql')">SQL</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Row -->
+        <div class="row py-4">
+          <!-- Project 1 -->
+          <div class="filterDiv show backend frontend col-sm-4 p-0 ">         
+            <div class="">
+              <div class="project">
+                <a href="#"><img src="images/thumb-1.jpg" class="card-img"></a>
+                <div class="project-overlay">
+                  <div class="project-hover-text">
+                    <p>.NET Core MVC site build from the scratch.</p>
+                    <a class="btn btn-primary" data-target="#modalProject1" data-toggle="modal" onclick="currentSlide(1)" href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+		  <!--Project 2-->
+          <div class="filterDiv backend frontend show col-sm-4 p-0 ">
+              <div class="">
+                  <div class="project">
+                    <a href="#"><img src="images/pj3.png" class="card-img"></a>
+                    <div class="project-overlay">
+                      <div class="project-hover-text">
+                        <p>.NET Core MVC site build from the scratch.</p>
+                        <a class="btn btn-primary" data-target="#modalProject2" data-toggle="modal" onclick="currentSlide(1)"  href="#">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          
+		  <!--Project 3-->
+          <div class="filterDiv sql show col-sm-4 p-0 ">
+              <div class="">
+                  <div class="project">
+                    <a href="#"><img src="images/pj2.png" class="card-img"></a>
+                    <div class="project-overlay">
+                      <div class="project-hover-text">
+                        <p>Dynamic report dashboard using Power BI Desktop for data housed in a SQL Server Data Warehouse.</p>
+                        <a class="btn btn-primary" data-target="#modalProject3" data-toggle="modal" onclick="currentSlide(1)"  href="#">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+		  <!-- Project 4 -->
+          <div class="filterDiv frontend show col-sm-4 p-0 ">
+              <div class="">
+                  <div class="project">
+                    <a href="#"><img src="images/thumb-2.jpg" class="card-img"></a>
+                    <div class="project-overlay">
+                      <div class="project-hover-text">
+                        <p>Mock-up build base on approved design.</p>
+                        <a class="btn btn-primary" data-target="#modalProject4" data-toggle="modal" onclick="currentSlide(1)"  href="#">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="filterDiv frontend show col-sm-4 p-0 ">
+              <div class="">
+                  <div class="project">
+                    <a href="#"><img src="images/hp1.png" class="card-img"></a>
+                    <div class="project-overlay">
+                      <div class="project-hover-text">
+                        <p>Web site using HTML/CSS</p>
+                        <a class="btn btn-primary" data-target="#modalProject5" data-toggle="modal" onclick="currentSlide(1)"  href="#">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+		  
+		  <!--Project 6-->
+          <div class="filterDiv sql show col-sm-4 p-0 ">
+              <div class="">
+                  <div class="project">
+                    <a href="#"><img src="images/sql1.png" class="card-img"></a>
+                    <div class="project-overlay">
+                      <div class="project-hover-text">
+                        <p>Building and manipulating databases using SQL.</p>
+                        <a class="btn btn-primary" data-target="#modalProject6" data-toggle="modal" onclick="currentSlide(1)"  href="#">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+		  
+        </div>
+		
+      </div>
+    </section>
+    <!-- / Projects -->
+
+    <!-- CONTACT -->
+    <!-- <section class="">
+      <div class="container py-5">       
+          <div class="text-center mb-4">
+            <h1 class="font-weight-bold">Contact me</h1>   
+            <p class="color-blue my-4 font-weight-bold">Want to work together? 
+              <br>Get in touch with me! </p>
+          </div>
+          <div class="row d-flex justify-content-center py-4">
+            <div class="col-md-6">
+              <form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="" placeholder="Your Name">
+                    </div>
+                  </div>
+                </div>               
+                <div class="row">   
+                  <div class="col-md-12">
+                      <div class="mb-3">
+                          <input type="text" id="email" name="email" class="" placeholder="Your Email">
+                      </div>
+                    </div>
+                </div>            
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                        <textarea type="text" id="message" name="message" rows="2" class="md-textarea" placeholder="What's on your mind?"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit"  class="mybtn mybtn-black">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </section> -->
+    <!-- / CONTACT -->
+
+  <!-- Footer -->
+  <footer class="bg-color-darkgrey">
+    <div class="container">
+      <div class="row d-flex justify-content-center color-white social-icons py-4">
+        <div class="col-md-6">
+          <div class="row d-flex text-center">
+              <div class="col-4">
+                  <a href="https://github.com/vnguyen14?tab=repositories"><i class="fab fa-github-square color-blue"></i></i></a>
+                </div>
+                <div class="col-4">
+                  <a href="https://twitter.com/_nttvi"><i class="fab fa-twitter-square color-blue"></i></a>
+                </div>
+                <div class="col-4">
+                  <a href="https://www.linkedin.com/in/vi-nguyen-371a92198/"><i class="fab fa-linkedin color-blue"></i></a>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 color-white text-center">
+          <p>Vi Nguyen © 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <!-- Project 1 Modal -->
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalProject1" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content"> 
+        <div class="modal-body mb-0 p-0">
+          <div class="">
+            <!-- Youtube Video -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/olHpk8N3uOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+          </div> 
+        </div>
+        <div class="modal-footer">
+          <div>         
+            <p>
+              Site build using .NET Core MVC. You can create,edit and delete customers, register visits, modify
+              prices for services. It has user roles and email validation.
+            </p>
+            <p>  
+              Site was made from scratch from both the front-end as well as back-end. If you want to see more, you
+              can visit my GitHub page for the code.
+            </p>
+            <hr />
+            <a href="https://github.com/RubenVerdin/LBNails" target="_blank">View Code</a>
+            <button class="close cursor" data-dismiss="modal" type="button">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Project 2 Modal -->
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalProject2" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">	
+        <div class="modal-body mb-0 p-0">
+          <div class="">
+            <div class="numbertext">1 / 1</div>
+            <img src="images/pj3.png" style="width:100%">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div>					
+            <p>
+              Site build using .NET Core MVC. You can create,edit and delete authors, papers, submissions information, 
+			  assign tasks for editors and reviewers. It has user roles and email validation.
+            <p>  
+              Site was made from scratch from both the front-end as well as back-end. If you want to see more, you
+              can visit my GitHub page for the code.
+            </p>
+            </p>
+            <hr />
+            <a href="http://localhost:57383/" target="_blank">View Site</a> 
+            <a href="https://github.com/Neronic/TPRP.git" target="_blank">View Code</a>
+            <button class="close cursor" data-dismiss="modal" type="button">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 Modal -->
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalProject3" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content"> 
+        <div class="modal-body mb-0 p-0">
+          <div class="mySlides">
+            <div class="numbertext">1 / 2</div>
+            <img src="images/pj1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 2</div>
+            <img src="images/pj2.png" style="width:100%">
+          </div>
+  
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="modal-footer">
+          <div>         
+            <p> Power BI model and dynamic report dashboard for Conteso Retailers to decide best-selling products
+			 products and channels are most profitable, Conteso’s most profitable years, quarters, or months.</p>
+            <hr />
+
+            <button class="close cursor" data-dismiss="modal" type="button">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Project 4 Modal -->
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalProject4" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">	
+        <div class="modal-body mb-0 p-0">
+          <div class="">
+            <div class="numbertext">1 / 1</div>
+            <img src="images/modal2_1.jpg" style="width:100%">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div>					
+            <p>
+              Mock-up for the SupportiveLiving website. It is build base on approved design by the customer 
+              using HTML, CSS, Bootstrap and vanilla JavaScript.
+
+              You can see the code on my GitHub page as well as the PDF for the design.
+            </p>
+            <hr />
+            <a href="samples/SupportiveLiving/index.html" target="_blank">View Site</a> 
+            <a href="https://github.com/RubenVerdin/Portfolio/tree/master/samples/SupportiveLiving" target="_blank">View Code</a>
+            <button class="close cursor" data-dismiss="modal" type="button">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <!-- Project 5 Modal -->
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalProject5" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content"> 
+        <div class="modal-body mb-0 p-0">
+          <div class="mySlides3">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/hp2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides3">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/hp3.png" style="width:100%">
+          </div>
+  
+          <div class="mySlides3">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/hp4.png" style="width:100%">
+          </div>
+		  
+		  <div class="mySlides3">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/hp5.png" style="width:100%">
+          </div>
+		  
+          <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+        </div>
+        <div class="modal-footer">
+          <div>         
+            <p> Mock-up for a Harry Potter resemble website! It's part of my school project. It is build base on approved design by the customer 
+              using HTML, CSS and vanilla JavaScript.</p>
+			  <p>You can see the code on my GitHub page for the design.</p>
+            <hr />
+
+            <hr />
+            <a href="https://vnguyen14.github.io/HPSite/." target="_blank">View Site</a> |
+            <a href="https://github.com/vnguyen14/HPWeb.git" target="_blank">View Code</a>
+            <button class="close cursor" data-dismiss="modal" type="button">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Project 6 Modal -->
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalProject6" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content"> 
+        <div class="modal-body mb-0 p-0">
+          <div class="mySlides2">
+            <div class="numbertext">1 / 2</div>
+            <img src="images/sql1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides2">
+            <div class="numbertext">2 / 2</div>
+            <img src="images/sql2.png" style="width:100%">
+          </div>
+  
+          
+          <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+        </div>
+        <div class="modal-footer">
+          <div>         
+            <p>Using SQL and T-SQL commands to build databases, send information, retrieve information, and organize information in a database.</p>
+            <hr />
+
+            <button class="close cursor" data-dismiss="modal" type="button">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
